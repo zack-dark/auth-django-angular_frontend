@@ -17,7 +17,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,

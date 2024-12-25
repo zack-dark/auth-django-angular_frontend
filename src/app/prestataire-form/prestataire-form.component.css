@@ -1,0 +1,35 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select, textarea, button {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  small {
+    color: red;
+    font-size: 12px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
