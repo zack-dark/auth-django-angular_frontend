@@ -1,0 +1,43 @@
+<h1>Ajout de Produit</h1>
+<form [formGroup]="prestataireForm" (ngSubmit)="onSubmit()">
+  <!-- Nom du produit -->
+  <div>
+    <label for="productName">Nom du produit :</label>
+    <input id="productName" type="text" formControlName="productName" />
+    <small *ngIf="prestataireForm.get('productName')?.invalid && prestataireForm.get('productName')?.touched">
+      Nom du produit requis (min 3 caractères).
+    </small>
+  </div>
+
+  <!-- Catégorie -->
+  <div>
+    <label for="category">Catégorie :</label>
+    <select id="category" formControlName="category">
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+    <small *ngIf="prestataireForm.get('category')?.invalid && prestataireForm.get('category')?.touched">
+      Veuillez sélectionner une catégorie.
+    </small>
+  </div>
+
+  <!-- Description -->
+  <div>
+    <label for="description">Description :</label>
+    <textarea id="description" rows="4" formControlName="description"></textarea>
+    <small *ngIf="prestataireForm.get('description')?.invalid && prestataireForm.get('description')?.touched">
+      La description est requise (min 10 caractères).
+    </small>
+  </div>
+
+  <!-- Prix -->
+  <div>
+    <label for="price">Prix :</label>
+    <input id="price" type="number" formControlName="price" />
+    <small *ngIf="prestataireForm.get('price')?.invalid && prestataireForm.get('price')?.touched">
+      Veuillez entrer un prix valide (minimum 1).
+    </small>
+  </div>
+
+  <!-- Bouton d'envoi -->
+  <button type="submit" [disabled]="prestataireForm.invalid">Enregistrer</button>
+</form>

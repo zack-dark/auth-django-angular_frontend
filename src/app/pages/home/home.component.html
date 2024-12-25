@@ -1,4 +1,47 @@
-<div class="container nt-5 text-center">
-    <h3> {{ message }} </h3>
+  <div class="container">
+    <!-- Header -->  
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Left Section -->
+      <div class="preview-section">
+        <img src="assets/preview.png" alt="Product Preview" />
+      </div>
+  
+      <!-- Right Section -->
+      <div class="login-section">
+        <h2>Log in</h2>
+        <button class="social-login google-login">Continue with Google</button>
+        <p class="divider">or</p>
+        <form [formGroup]="form" (submit)="submit()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input  formControlName="email" type="email" id="email" placeholder="Enter your email" />
+            <label for="mdp">Mot de passe</label>
+            <input  formControlName="password" type="password" id="password" placeholder="Enter your password" />
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <p class="signup-link">
+          I don’t have any account. <a routerLink="/register" class="btn btn-outline-light me-2">I create my account</a>
+        </p>
+
+      </div>
+    </main>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Visibilité et pilotage gratuits sur PagesJaunes et 6 partenaires !</p>
+      <div class="partners">
+        <img src="assets/partner1.png" alt="Partner 1" />
+        <img src="assets/partner2.png" alt="Partner 2" />
+        <img src="assets/partner3.png" alt="Partner 3" />
+        <span>+20</span>
+      </div>
+    </footer>
   </div>
+  
   
